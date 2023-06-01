@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--向搜索引擎表示该页面是html语言，并且语言为中文网站，
+其"lang"的意思就是“language”，语言的意思，而“en”即表示english-->
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>图像数据标注系统</title>
+
+    <!-- Loading Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="../static/plugins/Bootstrap/css/bootstrap.min.css">
+
+    <!-- Loading user-defined css -->
+    <link rel="stylesheet" type="text/css" href="../static/css/label_image.css">
+
+    <!-- Loading js -->
+    <script src="../static/js/jquery-3.6.1.js"></script>
+    <script src="../static/plugins/Bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+<header>
+    <img src="../static/images/BJ.png" alt="BJ" style="float: left; margin: 15px 15px" height="66" width="224.4">
+    <h1>图像数据标注系统</h1>
+</header>
+
+<div class="main">
+    <div class="manipulation container">
+        <div class="model_select">
+            <form action="">
+                <label for="sell" class="form-label" id="font_piggy">模型：</label>
+<!--                选择按钮-->
+                <select class="form-select" id="sell" name="sellList">
+                    <option value="1">模型</option>
+                </select>
+            </form>
+        </div>
+
+        <div class="d-grid" style="margin: 80px 30px">
+            <input type="file" name="load_img01" id="load_img01" class="image_load"/>
+            <label for="load_img01">选择图片</label>
+        </div>
+
+        <div class="d-grid" style="margin: 80px 30px">
+            <button type="button" class="btn btn-info btn-block" onclick="label()">开始标注</button>
+        </div>
+    </div>
+
+    <div class="display container">
+        <div class="return">
+            <div style="float: right">
+
+                <a href="/" class="btn btn-info" role="button">返回首页</a>
+            </div>
+        </div>
+
+        <div class="pictures_exhibit">
+            <div class="picture_l">
+                <img src="../static/images/loading01.png" alt="等待上传" height="380" width="400" id="img_loaded01"/>
+            </div>
+            <div class="picture_r">
+                <img src="../static/images/loading02.png" alt="等待检测" height="380" width="400" id="img_detected"/>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+<!--<script> 元素用于嵌入或引用可执行脚本-->
+<!-- Loading js -->
+<script src="../static/js/self/load_file.js"></script>
+
+</body>
+</html>
